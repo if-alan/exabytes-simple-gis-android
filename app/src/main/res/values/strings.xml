@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Exabytes-Simple-GIS</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="titik_kordinat">Titik Kordinat</string>
+    <string name="alamat_lengkap">Alamat Lengkap</string>
+    <string name="laporkan">Laporkan</string>
+</resources>
