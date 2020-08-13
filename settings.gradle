@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "ExabytesGIS"
+rootProject.name = "Exabytes-Simple-GIS-Android"
