@@ -3,12 +3,16 @@
     package="id.alan.exabytes.simplegis">
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <!-- Masukkan API KEY yang kamu dapat di value di atas ini -->
+
         <activity android:name=".createreport.CreateReportActivity" />
 
         <activity android:name=".report.MainActivity">
