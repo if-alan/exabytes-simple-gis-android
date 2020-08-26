@@ -10,20 +10,33 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.maps.model.LatLng
 import id.alan.exabytes.simplegis.R
+import id.alan.exabytes.simplegis.data.Report
 import kotlinx.android.synthetic.main.activity_create_report.*
 import java.util.*
 
 class CreateReportActivity : AppCompatActivity() {
+    private lateinit var createReportViewModel: CreateReportViewModel
+
+    private lateinit var report: Report
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_report)
+        createReportViewModel = ViewModelProvider(this).get(CreateReportViewModel::class.java)
+
         clickListener()
     }
 
     private fun clickListener() {
         ivEvent.setOnClickListener { takeImageFromGallery() }
+
+        btnReport.setOnClickListener {
+            createReportViewModel.insert(report)
+            finish()
+        }
     }
 
     private fun takeImageFromGallery() {
@@ -62,6 +75,14 @@ class CreateReportActivity : AppCompatActivity() {
         ivEvent.setImageURI(selectedImage)
         tvCordinate.text = latlng.toString()
         tvAddress.text = address
+
+        //Save data to Model
+        report = Report(
+            image = selectedImage!!.path!!,
+            lat = latlng.latitude.toString(),
+            lng = latlng.longitude.toString(),
+            address = address
+        )
     }
 
     private fun handleWhenNoImageData() {

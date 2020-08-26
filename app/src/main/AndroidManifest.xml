@@ -15,8 +15,6 @@
             android:value="@string/google_maps_key" />
         <!-- Masukkan API KEY yang kamu dapat di value di atas ini -->
 
-        <activity android:name=".createreport.CreateReportActivity" />
-
         <activity android:name=".report.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".createreport.CreateReportActivity" />
     </application>
 
 </manifest>
