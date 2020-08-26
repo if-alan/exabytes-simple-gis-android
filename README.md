@@ -2,7 +2,7 @@
 
 GIS (geographical information system) adalah sebuah sistem informasi yang mengoleksi, menginformasikan, dan menampilkan  apapun yang berkaitan dengan dunia kita
 
-## Bagaiman cara menjalankan fitur google maps
+## Bagaimana cara menjalankan fitur google maps
 
 ### Terlebih dahulu dapatkan API KEY untuk google maps mu
 
@@ -12,6 +12,14 @@ GIS (geographical information system) adalah sebuah sistem informasi yang mengol
 4. Pada menu *Hamburger* pada kiri atas, pilih **API & Services** lalu pilih **Credentials**
 5. Pilih **+ Create Credentials** lalu **API Key**
 6. Akhirnya, kamu bisa  mendapatkan API Key untuk fitur google maps mu
+
+## Bagaimana cek local database mu
+
+1. Ketika aplikasi baru saja berjalan ketika di build, buka logcat dan cari kata **open**
+<br><img src="readme/check-local-database.PNG" width="400" align="center"><br>
+
+2. Buka browser mu dan buka link yang didapat
+<br><img src="readme/local-database.PNG" width="400" align="center"><br>
 
 # License
 
